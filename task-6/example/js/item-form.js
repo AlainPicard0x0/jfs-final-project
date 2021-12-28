@@ -1,4 +1,3 @@
-
 // Initialize a new ItemsController with currentId set to 0
 const itemsController = new ItemsController(0);
 

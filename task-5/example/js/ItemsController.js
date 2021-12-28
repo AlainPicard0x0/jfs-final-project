@@ -1,4 +1,3 @@
-
 // Create a ItemsController class
 class ItemsController {
     // Set up the items and currentId property in the contructor
