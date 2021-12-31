@@ -24,7 +24,7 @@ In this step, we'll define our Service interface and create an implentation that
 
             Item save( Item item );
 
-            boolean delete( int itemId );
+            void delete( int itemId );
 
             List<Item> all();
 
