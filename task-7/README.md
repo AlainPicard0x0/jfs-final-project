@@ -78,7 +78,7 @@ In this step, we'll create the database Schema on your local instance of MySQL d
 5.  Create a new database user running the following commands at the mysql prompt:
 
     ```bash
-    mysql> create user 'admin'@'%' identified by 'passw0rd'; -- Creates the user
+    mysql> create user 'admin'@'%' identified by 'password'; -- Creates the user
     mysql> grant all on itemsdb.* to 'admin'@'%'; -- Gives all privileges to the new user on the newly created database
     ```
 
