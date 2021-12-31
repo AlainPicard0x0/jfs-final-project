@@ -29,6 +29,8 @@ In this step, we'll generate a Spring Boot project using the [spring initializr]
 >
 > **Expected Result**
 > You should see the server is started correctly and no error is shown on the console.
+> (If you get an error try commenting out the following line in your dependencies inside of your build.gradle file)
+> ` implementation 'org.springframework.boot:spring-boot-starter-data-jpa' `
 
 ### Step 2: Database Connection with Spring Data JPA
 
@@ -42,7 +44,7 @@ In this step, we'll connect the Spring Boot project with the MySQL database crea
 1. Make sure you create the database user and grant access to your database:
 
    ```bash
-       mysql> create user 'admin'@'%' identified by 'passw0rd'; -- Creates the user
+       mysql> create user 'admin'@'%' identified by 'password'; -- Creates the user
        mysql> grant all on itemsdb.* to 'admin'@'%'; -- Gives all privileges to the new user on the newly created database
    ```
 
@@ -54,7 +56,7 @@ In this step, we'll connect the Spring Boot project with the MySQL database crea
    spring.jpa.hibernate.ddl-auto=none
    spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/itemsdb
    spring.datasource.username=admin
-   spring.datasource.password=passw0rd
+   spring.datasource.password=password
    ```
 
 3. Add the following dependency to your build.gradle
@@ -62,7 +64,7 @@ In this step, we'll connect the Spring Boot project with the MySQL database crea
    ```gradle
        runtimeOnly 'mysql:mysql-connector-java'
    ```
-
+(If you commented out ` implementation 'org.springframework.boot:spring-boot-starter-data-jpa' ` earlier than you should uncomment it out now.)
 #### Test Your Code!
 
 > Now is a good chance to test your code, run your Application main method to start the server.
