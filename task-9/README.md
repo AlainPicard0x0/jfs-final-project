@@ -188,16 +188,16 @@ Now that we have defined the `ItemService` behavior and created an implementatio
 
 ## Results
 
-Start your server and test your Item's endpoint using any HTTP client like [Postman](https://www.postman.com/) - [Example of how to send requests in postman](https://learning.postman.com/docs/sending-requests/requests/)
+Start your server and test your Item's endpoints using any HTTP client like [Postman](https://www.postman.com/) - [Example of how to send requests in postman](https://learning.postman.com/docs/sending-requests/requests/)
 
 ## Tip
 
-If you receive an error when testing your POST route open your application.properties file and change 
+If you receive an error when testing your POST or PUT routes open your application.properties file and change 
 ` spring.jpa.hibernate.ddl-auto=none `
 to 
 ` spring.jpa.hibernate.ddl-auto=create `
 
-Once Your POST route works you can change it back to ` spring.jpa.hibernate.ddl-auto=none `.
+Once Your POST and PUT routes work you can change your application.properties back to ` spring.jpa.hibernate.ddl-auto=none `.
 
 ## Example
 
