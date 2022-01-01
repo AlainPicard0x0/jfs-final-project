@@ -84,6 +84,11 @@ constructor() {
 >
 > **Expected Result**
 > You should see the success message on the console log.
+>
+> 2. Open `items.js` in your browser.
+>
+> **Expected Result**
+> You should see the products/posts from your database displayed on your webpage.
 
 ### Step 2: Consuming REST API
 
