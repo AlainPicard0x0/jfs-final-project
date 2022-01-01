@@ -58,6 +58,13 @@ In this step, we'll use the Fetch API to consume the save item endpoint.
     ```
 Call your `loadItemsFromDatabase()` at the bottom of `items.js`.
 
+5. Now that you are getting your `items` from the Database, you don't need to use `localStorage` anymore. Inside of `ItemsController.js`, remove everything from within your constructor so that you have only the following line of code:
+```
+constructor() {
+        this.items = [];
+    }
+```
+
 > #### Test Your Code!
 >
 > Now is a good chance to test your code, start your Server API and verify if the data is stored correctly on the MySQL database.
