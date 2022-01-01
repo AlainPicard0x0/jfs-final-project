@@ -52,9 +52,20 @@ In this step, we'll use the Fetch API to consume the save item endpoint.
 
 4. In `items.js`, create a `loadItemsFromDatabase()` function. Use `fetch` to make a call to your `GET` Route. ie: `fetch('http://localhost:8080/item/all')`. Once you receive your response from your `GET` request, use a `for loop` to populate your `items` Array with the data received. Finally, call `loadCardsListFromItemsController()` from within the `loadItemsFromDatabase()` function. ie: 
    ```
-    .then(() => { 
-    loadCardsListFromItemsController();
+    function loadItemsFromDatabase() {
+    fetch('http://localhost:8080/item/all')
+    .then(response => response.json())
+    .then(data => {
+        for(let i = 0; i < data.length; i++) {
+            itemsController.items.push(data[i]);                
+        }   
     })
+    .then(() => {
+        loadCardsListFromItemsController();
+    })
+    .catch((error) => {
+        console.log('Error: ', error);
+    })   
     ```
 Call your `loadItemsFromDatabase()` at the bottom of `items.js`.
 
