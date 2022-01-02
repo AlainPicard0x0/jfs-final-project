@@ -37,7 +37,7 @@ In this step, we'll use the Fetch API to consume the save item endpoint.
            }
    ```
 
-2. Modify the `save` method of the `ItemsController.java` to avoid the [CORS mechanism](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+2. Modify the `save` method, the `getItems` method, the `findItemById` method, the `update` method, and the `delete` method of the `ItemsController.java` to avoid the [CORS mechanism](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
    ```java
        @CrossOrigin
@@ -96,22 +96,78 @@ constructor() {
 >
 > - [How to use fetch api for crud operations](https://dev.to/duhbhavesh/how-to-use-fetch-api-for-crud-operations-57a0)
 
-Now that we have made the implementation of the `save` function to consume the `POST /item` endpoint we'll implement the missing functions:
+Now that we have made the implementation of the `save` function to consume the `POST /item` endpoint and the `loadItemsFromDatabase` function to consume the `GET /item/all` endpoint we'll implement the missing functions:
 
+- delete
 - update
 - findByItemId
-- delete
 
-1. Implement the `update` function.
-2. Change your code so the save button calls the `update` function.
-3. Test the `update` function(make sure you send an existing item id)
-4. Implement the `findItemById`
-5. Change your code so the save button calls the `findItemById` function.
-6. Populate the item's data into the corresponding form fields.
-7. Test the `findItemById` function (make sure you send an existing item id)
-8. Implement the `delete` function.
-9. Change your code so the save button calls the `delete` function.
-10. Test the `delete` function (make sure you send an existing item id)
+1. Add an `update` button and a `delete` button to the product/post card inside of your `addItemCard` function in `items.js`.
+2. Add an `id` attribute to your product/post card inside of your `addItemCard` function in `items.js`.
+3. Add an event listener to your delete button listening for a `click` event.
+4. Save the parentElement of your delete button to a variable called `item`.
+5. Call your `delete` method and pass in `item.id` as the argument.
+6. Use `location.reload()` to refresh your page.
+```javascript
+    function addItemCard(item){
+    const itemHTML = '<div id="'+item.id +'" class="card" style="width: 20rem;">\n' +
+        '    <img src="'+item.imageUrl +'" width="300" height="250"  alt="product image">\n' +
+        '    <div class="card-body">\n' +
+        '        <h5 class="card-title">'+item.name+'</h5>\n' +
+        '        <p class="card-text">'+item.description+'</p>\n' +
+        '        <a href="#" class="btn btn-primary">Add</a>\n' +
+        '        <a href="./item_update_form" class="btn btn-primary">Update</a>\n' +
+        '        <a href="#" class="btn btn-danger btn-delete">Delete</a>\n' +
+        '    </div>\n' +
+        '</div>\n' +
+        '<br/>';
+    const itemsContainer = document.getElementById("list-items");
+    itemsContainer.innerHTML += itemHTML;
+
+    let deleteButton = document.getElementsByClassName("btn-delete");
+    for(let i = 0; i < deleteButton.length; i++) {
+        let deleteBtn = deleteButton[i];
+        deleteBtn.addEventListener("click", () => {
+            let item = deleteBtn.parentElement.parentElement;
+            itemsController.delete(item.id);
+            location.reload();
+        })            
+    }
+}
+``` 
+7. In `js/ItemsController.js`, implement the `delete` function so it will `DELETE` the item's data using the `fetch` function:
+```javascript
+    delete(itemId){
+        fetch(`http://localhost:8080/item/${itemId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        .then(response => console.log("Success:", response))
+        .catch((error) => {
+            console.error("Error:", error);
+        })
+    }
+```
+ 
+> #### Test Your Code!
+>
+> Now is a good time to test your code, start your Server API.
+>
+> 1. Open `items.html` in your browser and click on the `delete` button.
+>
+> **Expected Result**
+> You should see the item removed from your page and from your database.
+>
+
+8. Implement the `update` function.
+9. Change your code so the save button calls the `update` function.
+10. Test the `update` function(make sure you send an existing item id)
+11. Implement the `findItemById`
+12. Change your code so the save button calls the `findItemById` function.
+13. Populate the item's data into the corresponding form fields.
+14. Test the `findItemById` function (make sure you send an existing item id)
 
 ## Results
 
