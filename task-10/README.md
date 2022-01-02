@@ -102,12 +102,12 @@ Now that we have made the implementation of the `save` function to consume the `
 - update
 - findByItemId
 
-1. Add an `update` button and a `delete` button to the product/post card inside of your `addItemCard` function in `items.js`.
+1. Add an `update` button and a `delete` button to the product/post card inside of your `addItemCard` function in `items.js`. Add the class `btn-delete` to your newly created `delete` button.
 2. Add an `id` attribute to your product/post card inside of your `addItemCard` function in `items.js`.
 3. Add an event listener to your delete button listening for a `click` event.
-4. Save the parentElement of your delete button to a variable called `item`.
+4. Save the `parentElement` of your delete button to a variable called `item`.
 5. Call your `delete` method and pass in `item.id` as the argument.
-6. Use `location.reload()` to refresh your page.
+6. Use `location.reload()` to refresh your page so that your items are reloaded.
 ```javascript
     function addItemCard(item){
     const itemHTML = '<div id="'+item.id +'" class="card" style="width: 20rem;">\n' +
@@ -161,10 +161,25 @@ Now that we have made the implementation of the `save` function to consume the `
 > You should see the item removed from your page and from your database.
 >
 
-8. Implement the `update` function.
-9. Change your code so the save button calls the `update` function.
-10. Test the `update` function(make sure you send an existing item id)
-11. Implement the `findItemById`
+8. Now we will implement the `update` function. 
+9. Create a new html file called `update_form.html` in your root directory and a new javaScript file called `update-form.js` in your `js` folder. Make sure you use `script` tags to link your `ItemsController.js` and `update-form.js` files in your `update_form.html` file in that order.
+10. Add the required code to your `update_form.html` file. (Should be similar to the code in `item_form.html`). You will need a `form` element that accepts inputs for the values you wish to update.
+11. Inside your `item.js` file, you will need to decide how you want to implement the `update` feature. You could choose to add an `href` attribute to all your `updateButton`'s and redirect the user to your `update_form.html` page when any of the `updateButton`'s are clicked or you could use an `eventListener` and listen for which specific `updateButton` is clicked so that you update the item who's `updateButton` was actually clicked.
+12. Inside your `update-form.js` file, you will need to do almost the same things that you did in your `item-form.js` file however you will need to call your `itemsController.update()` method passing in the values from your `update_form.html` file.
+13. Inside your `ItemsController.js` file you will need to implement your `update()` method. This method should take in any values you would like to have updated and use the `fetch` api to consume your `PUT item/id` endpoint on your server. (Your `update` method will be similar to you `save` method).
+14. Test the `update` function(make sure you send an existing item id)
+> #### Test Your Code!
+>
+> Now is a good time to test your code, start your Server API.
+>
+> 1. Open `items.html` in your browser and click on the `update` button.
+>
+> 2. Enter new values for your product/post.
+>
+> **Expected Result**
+> You should see the product/post's values updated on your page and in your database.
+>
+15. Implement the `findItemById`
 12. Change your code so the save button calls the `findItemById` function.
 13. Populate the item's data into the corresponding form fields.
 14. Test the `findItemById` function (make sure you send an existing item id)
