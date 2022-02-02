@@ -27,7 +27,7 @@ will be responsible for adding new items to the list.
 > #### Useful Resources for this step
 > - [Document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 
-1. Define a function called `addItemCard(item)` inside your in `js/items.js`
+1. Inside your `js` folder, create a new JavaScript file and name it `items.js`. Define a function called `addItemCard(item)` inside your in `js/items.js`
 2. Write the code so your function can create the same HTML structure of your item card representation replacing the item's information.
 
 > #### Test Your Code!
