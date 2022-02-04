@@ -59,7 +59,7 @@ In this step, we'll create a basic HTML structure for the home page which includ
     * Home
     * About Us
     * Items List
-    * Model Form
+    * Item Form
 3. Add a link to each menu item so it redirects to expected html page.
 
 > #### Useful Resources for this step
