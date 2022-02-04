@@ -25,7 +25,7 @@ In this step, we'll create a basic HTML structure for the home page which includ
 ### Step 2: Implementing your Items List page
 
 1. Create a new file depending on the project you are implementing: 
-    * `products.html`
+    * `items.html`
     * `posts.html`
 2. Include your `styles.css` file inside your html page.
 3. Create a sample list with some sample data to see how your items list will look like
