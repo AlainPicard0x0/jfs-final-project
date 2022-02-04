@@ -14,7 +14,7 @@ In this step, we'll re-organise our folder structure in preparation for the next
 
 1. Create a `js` folder in your project if one does not already exist
 2. Create a file named `index.js` inside your `js` folder
-3. Add a `<script>` tag in your `html` file to use the new location of the `js/index.js` file.
+3. Add a `<script>` tag in your `index.html` file to use the new location of the `js/index.js` file.
 4. Create a `itemsController.js` file in the `js` folder
 5. Add a `<script>` tag pointing to the `js/itemsController.js` file _before_ the `<script>` tag pointing to the `js/index.js` file.
 
