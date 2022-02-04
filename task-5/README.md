@@ -13,7 +13,7 @@ For this task, we'll be creating the feature to display the objects list of the 
 In this step, we'll create the item representation using the [card component](https://getbootstrap.com/docs/4.4/components/card/)
 
 1. Read the documentation and understand how to use the [card components](https://getbootstrap.com/docs/4.4/components/card/)
-2. Define the HTML structure of the item card representation.
+2. Define the HTML structure of the item card representation inside your items.html or posts.html.
 3. Add a `div` element with id `list-items` to add your list items dynamically with JavaScript. 
 4. Add 3 different sample item cards inside your `div` element.
 > **Expected Result**
