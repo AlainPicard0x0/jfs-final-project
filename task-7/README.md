@@ -74,7 +74,7 @@ In this step, we'll create the database Schema on your local instance of MySQL d
     SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
     ```
-    <img src="./img/mysql-workbench.png">
+    <img src="./img/MySQL-img01.png">
     
 
 5.  Create a new database user running the following commands at the mysql prompt:
