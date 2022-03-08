@@ -57,7 +57,7 @@ reference(make sure you save the data as a String).
         localStorage.setItem("items", JSON.stringify(sampleItems));
 ```
 
-2. Modify the `ItemsController` so it loads the data from the storage implementing a new function `items.js` 
+2. Modify the `ItemsController` so it loads the data from the storage implementing a new function 
 
 ```javascript
     loadItemsFromLocalStorage() {
