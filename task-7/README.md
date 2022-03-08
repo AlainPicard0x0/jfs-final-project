@@ -16,6 +16,7 @@ In this step, we'll create a EER Model to represent the application data layer.
 
 1. Create a new MySQL Workbench project
    - From MySQL Workbench, Go to `File` and then click on `New Model` 
+   <img src="./img/mysql-img02.png">
 3. Create a new EER Model.
 4. Create a new table that will represent your model(posts or products) and add the required columns:
    Eg Item:
