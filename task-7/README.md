@@ -17,11 +17,9 @@ In this step, we'll create a EER Model to represent the application data layer.
 1. Create a new MySQL Workbench project
    - Select `itemsdb` Schema. If this Schema doesn't exist, right click in Schemas Navigation pane and select `Create Schema` and then click on `Apply`.
 
-   <img src="./img/mysql-schema-img">
-   <img src="./img/mysql-workbench.png">
+   <img src="./img/mysql-schema-img.jpg">
    
    - From MySQL Workbench, Go to `File` and then click on `New Model` 
-
 
    <img src="./img/mysql-img02.png">
    
