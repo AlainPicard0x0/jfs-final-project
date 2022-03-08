@@ -15,8 +15,9 @@ For this task, we'll be implementing the database of your application using MySQ
 In this step, we'll create a EER Model to represent the application data layer.
 
 1. Create a new MySQL Workbench project
-2. Create a new EER Model.
-3. Create a new table that will represent your model(posts or products) and add the required columns:
+   - From MySQL Workbench, Go to `File` and then click on `New Model` 
+3. Create a new EER Model.
+4. Create a new table that will represent your model(posts or products) and add the required columns:
    Eg Item:
 
    - `id`
