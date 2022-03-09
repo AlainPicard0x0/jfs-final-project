@@ -86,7 +86,7 @@ In this step, we'll create the database Schema on your local instance of MySQL d
     <img src="./img/MySQL-img01.png">
     
 
-5.  Create a new database user running the following commands at the mysql prompt:
+5.  Create a new database user running the following commands at the mysql prompt (MySQL Shell):
 
     ```bash
     mysql> create user 'admin'@'%' identified by 'password'; -- Creates the user
