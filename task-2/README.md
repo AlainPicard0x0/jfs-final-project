@@ -25,7 +25,7 @@ In this step, we'll create a basic HTML structure and include [Bootstrap](https:
 1. Create a new file called `about.html` in your project folder.
 2. Create a new file called `styles.css` and put this file inside a folder called `css` in your project folder.
 3. Include your `styles.css` file inside the `about.html` page. (Hint: If you need a reminder - look up how to include css files in html files.)
-3. Create a new Github repo and add, commit and push your files.
+
 
 ### Step 2: Implementing your About page
 
