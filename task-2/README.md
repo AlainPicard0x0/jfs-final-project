@@ -16,7 +16,7 @@ The page will contain the following parts:
 ## Walkthrough
 
 ### Step 0: Create a private GitHub repository
-Create a private GitHub repository that is shared among your groupmates and your instructor.
+1. Create a private GitHub repository that is shared among your groupmates and your instructor.
 
 ### Step 1: Create the page structure
 
